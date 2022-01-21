@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<main class="main">
+  <div class="game hide">
+    <div class="left-side">
+      <div class="left-side__name"></div>
+      <canvas width="140" height="140" class="left-side__next-tetramino"></canvas>
+      <div class="left-side__score">0</div>
+      <div class="left-side__rows">0</div>
+      <div class="left-side__record">0</div>
+    </div>
+    <canvas class="tetris" width="350" height="700"></canvas>
+  </div>
+  <div class="leaderboard hide">
+    <h2>Таблица рекордов</h2>
+    <div class="table"></div>
+    <button class="return-to-home">Вернуться в игру</button>
+  </div>
+  <div class="greetings">
+    <button class="start-game">Подтвердить</button>
+    <label for="input">
+      <input type="text" id="input" autocomplete="false" class="my-name" required>
+      <span class="placeholder">Введите свое имя</span>
+    </label>
+  </div>
+</main>
+<script type="module" src="index.js"></script>
+</body>
+</html>

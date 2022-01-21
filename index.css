@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background-color: #141010;
+    display: flex;
+    justify-content: center;
+}
+
+
+canvas {
+    border: 1px solid black;
+    background-color: #0d4269;
+}
+
+.game.hide {
+    display: none;
+}
+
+.greetings.hide {
+    display: none;
+}
+
+.leaderboard.hide {
+    display: none;
+}
+
+.leaderboard {
+    margin-top: 50px;
+}
+.table {
+    padding: 10px 0;
+    font-size: 20px;
+    margin-bottom: 20px;
+    height: 500px;
+    width: 500px;
+    overflow: auto;
+    margin-top: 10px;
+}
+.table::-webkit-scrollbar {
+    width: 10px;
+}
+
+.table::-webkit-scrollbar-track {
+    background-color: #161b29;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background-color: #2d354b;
+    border-radius: 5px;
+}
+.leaderboard h1 {
+    margin-bottom: 20px;
+}
+.leaderboard h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #0d4741;
+    margin-bottom: 5px;
+}
+
+.row.my-result {
+    background-color: tomato;
+}
+.name.my-result:after {
+    content: 'Ты';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-weight: bold;
+    transform: translate(calc(100% + 10px), -50%);
+    font-size: 17px;
+}
+.left-side__next-tetramino {
+    padding: 15px;
+}
+.row > .name {
+    font-weight: bold;
+    position: relative;
+}
+
+
+.return-to-home {
+    border: none;
+    font-size: 17px;
+    background-color: #B23AD4;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+    width: 100%;
+}
+
+
+.return-to-home:hover {
+    transform: scale(1.01);
+}
+
+.left-side {
+padding-right: 100px;
+    font-size: 17px;
+}
+.left-side>*:before {
+    font-weight: bold;
+}
+.left-side__name {
+    margin-bottom: 10px;
+}
+.left-side__name:before{
+    content: 'Имя: ';
+}
+
+.left-side__score:before{
+    content: 'Текущий счет: ';
+}
+.left-side__rows:before{
+    content: 'Ряды: ';
+}
+.left-side__record:before{
+    content: 'Рекорд: ';
+}
+.game {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100vw;
+}
+.greetings {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+label {
+    position: relative;
+    order: -1;
+}
+.placeholder {
+    position: absolute;
+    transform: translate(0px, -15px)  scale(.9);
+    left: 0;
+    opacity: .8;
+    transition: .2s;
+    top: 0;
+    font-size: 20px;
+    pointer-events: none;
+    cursor: text;
+}
+.my-name:invalid~.placeholder {
+    transform: translate(10px, 10px) scale(1);
+    opacity: 1;
+
+}
+.my-name {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: .3s;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    background-color: transparent !important;
+    position: relative;
+}
+.my-name:before {
+    content: 'dlfj';
+}
+
+.start-game {
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: tomato;
+
+    transition: .3s;
+}
+
+.my-name:before{
+    position: absolute;
+    content: 'Начать игру';
+    z-index: 100;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+}
+
+
+.start-game:hover {
+    padding: 10px 70px;
+}
+
+.start-game:hover~.my-name {
+    opacity: .4;
+}
